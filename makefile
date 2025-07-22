@@ -30,7 +30,6 @@ all: $(TARGET)
 $(TARGET): $(SRCS) $(HDRS)
 	@echo "Compiling and linking sources to $(TARGET)..."
 	$(CC) $(CFLAGS) $(INCLUDE_PATHS) \
-	-Wl,--allow-undefined \
 	$(SRCS) -o $@
 
 	@echo "Stripping custom sections..."
